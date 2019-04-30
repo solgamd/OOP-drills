@@ -9,8 +9,11 @@
 - Create methods
 - Practice class inheritance
 - Object Literals, Pseudo Classes and methods
+
 - Write 5 object literals, have them named person1-person5. Give each a name property and have this be a name of a friend or family member. Then give each one a second property, sayHello, which is a function that will console log the string “Hello! My name is ________”.
+
 - Call the sayHello function on each object and check the console for a response.
+
 - This seems kind of repetitive doesn't it? Yeah, let’s practice some pseudo classes. Create a constructor function that will take a name, city, and age. (Remember, pseudo classes look like functions but are named with starting with a capital letter ex: function Example() null).
 - Write a method that will print a string similar to this “Hey! My name is ___ I am __ years old and live in __”.
 - Create 5 instances of the same friends from step 1, except this time use the pseudo class and method we just created.
