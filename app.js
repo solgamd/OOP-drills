@@ -109,7 +109,7 @@ class Sedan extends Vehicle {
         this.mpg = mpg;
     }
     aboutVehicle() {
-        console.log(`This is a ${this.size} size ${this.manufac} ${this.type} with ${this.wheels} wheels, ${this.doors} doors, and gets ${this.mpg} mpg.`);
+        console.log(`This is a ${this.size}-sized ${this.manufac} ${this.type} with ${this.wheels} wheels, ${this.doors} doors, and it gets ${this.mpg} mpg.`);
     }
 }
 let sedan = new Sedan('Cadillac','sedan', 4, 4, 'medium', 250);
@@ -117,16 +117,18 @@ sedan.aboutVehicle();
 console.log(sedan);
 
 class Motorcycle extends Vehicle {
-    constructor(hdbars, steer, doors, wheels) {
-        super(doors, wheels);
-        this.doors = (doors === 0 ? 'is a motorcycle' : 'is not a motorcycle');
+    constructor(manufac, wheels, doors, hdbars, steer) {
+        super(manufac, wheels, doors);
+        this.type = 'motorcycle';
+        this.doors = (doors === 0 ? `is a ${manufac} motorcycle` : `is not a ${manufac} motorcycle`);
         this.hdbars = (hdbars === true ? 'handlebars' : 'NO handlebars');
-        this.steer = (steer === true ? 'has a steering wheel' : 'does NOT have a steering wheel');
+        this.steer = (hdbars === true ? 'does NOT have a steering wheel' : 'has a steering wheel');
+        
     }  
     aboutVehicle() {
-        console.log(`This ${this.doors} so of course is has ${this.wheels} wheels, plus ${this.hdbars}, and it ${this.steer}.`);
+        console.log(`This ${this.doors} so of course is has ${this.wheels} wheels, plus ${this.hdbars} (so it ${this.steer}.)`);
     }
 }
-let moto = new Motorcycle(true, false, 0, 2);
+let moto = new Motorcycle('Royal Enfield', 2, 0, true, true);
 moto.aboutVehicle();
 console.log(moto);
